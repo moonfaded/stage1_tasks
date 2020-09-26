@@ -1,3 +1,6 @@
 [submodule "git/I_Can_Win"]
 	path = git/I_Can_Win
 	url = https://github.com/moonfaded/I_Can_Win.git
+[submodule "git/Hardcore"]
+	path = git/Hardcore
+	url = https://github.com/moonfaded/Hardcore.git
