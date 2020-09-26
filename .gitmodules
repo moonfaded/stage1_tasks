@@ -1,0 +1,3 @@
+[submodule "git/I_Can_Win"]
+	path = git/I_Can_Win
+	url = https://github.com/moonfaded/I_Can_Win.git
