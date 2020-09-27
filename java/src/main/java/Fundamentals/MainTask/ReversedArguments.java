@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ReversedArguments {
-  public static void main( String[] args ) {
+  public static void main(String[] args) {
 
     List<String> listFromStringArray = Arrays.asList(args);
     Collections.reverse(listFromStringArray);
