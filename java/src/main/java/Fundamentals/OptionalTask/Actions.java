@@ -8,7 +8,7 @@ public class Actions {
   private static int lineOfBiggestNumber;
   private static int columnOfBiggestNumber;
 
-  private static Scanner enterFromKeyboard = new Scanner(System.in);
+  private static final Scanner enterFromKeyboard = new Scanner(System.in);
 
   public static int getBiggestNumber() {
     return biggestNumber;
@@ -22,7 +22,7 @@ public class Actions {
     return columnOfBiggestNumber;
   }
 
-  public static int setSquareMatrixSizeFromKeyboard(){
+  public static int setSquareMatrixSizeFromKeyboard() {
     int squareMatrixSize = 0;
 
     while (squareMatrixSize < 1 || squareMatrixSize > 100) {
@@ -48,7 +48,7 @@ public class Actions {
 
     for (int matrixRow = 0; matrixRow < squareMatrixSize; matrixRow++) {
       for (int matrixColumn = 0; matrixColumn < squareMatrixSize; matrixColumn++) {
-          int convertedRangeForRandomizer = rangeOfRandomNumbers * 2 + 1;
+        int convertedRangeForRandomizer = rangeOfRandomNumbers * 2 + 1;
         int randomNumberByRandomizer = randomizer.nextInt(convertedRangeForRandomizer) - rangeOfRandomNumbers;
         matrix[matrixRow][matrixColumn] = randomNumberByRandomizer;
       }
@@ -69,10 +69,10 @@ public class Actions {
   }
 
   public static void printMatrix(int[][] squareMatrix) {
-    for (int matrixRow = 0; matrixRow < squareMatrix.length; matrixRow++) {
+    for (int[] matrix : squareMatrix) {
       System.out.println(" ");
       for (int matrixColumn = 0; matrixColumn < squareMatrix.length; matrixColumn++) {
-        System.out.print(" | " + squareMatrix[matrixRow][matrixColumn]);
+        System.out.print(" | " + matrix[matrixColumn]);
       }
     }
     System.out.println("\n");

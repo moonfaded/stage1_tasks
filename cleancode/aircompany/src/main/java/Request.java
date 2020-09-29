@@ -12,11 +12,6 @@ public class Request {
     this.planes = planes;
   }
 
-  @Override
-  public String toString() {
-    return planes.toString();
-  }
-
   public List<PassengerPlane> getPassengerPlanes() {
     List<PassengerPlane> passengerPlanes = new ArrayList<>();
     for (Plane plane : this.planes) {
@@ -56,5 +51,10 @@ public class Request {
   public Request sortByMaxSpeed() {
     planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
     return this;
+  }
+
+  @Override
+  public String toString() {
+    return planes.toString();
   }
 }

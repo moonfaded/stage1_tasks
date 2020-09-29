@@ -2,9 +2,9 @@ package Classes.MainTask;
 
 public class Car {
 
-  private int newId = 1;
-  private Mark mark;
-  private String model;
+  private static int newId = 1;
+  private final Mark mark;
+  private final String model;
   private int year;
   private String color;
   private int price;
@@ -26,72 +26,51 @@ public class Car {
     this.model = model;
   }
 
-//  public int getId() {
-//    return id;
-//  }
-//
-//  public void setId(int id) {
-//    this.id = id;
-//  }
+  public static int getNewId() {
+    return newId;
+  }
+
+  public static void setNewId(int newId) {
+    Car.newId = newId;
+  }
 
   public Mark getMark() {
     return mark;
-  }
-
-  public void setMark(Mark mark) {
-    this.mark = mark;
   }
 
   public String getModel() {
     return model;
   }
 
-  public void setModel(String model) {
-    this.model = model;
-  }
-
   public int getYear() {
     return year;
-  }
-
-  public void setYear(int year) {
-    this.year = year;
   }
 
   public String getColor() {
     return color;
   }
 
-  public void setColor(String color) {
-    this.color = color;
-  }
-
   public int getPrice() {
     return price;
-  }
-
-  public void setPrice(int price) {
-    this.price = price;
   }
 
   public String getNumber() {
     return number;
   }
 
-  public void setNumber(String number) {
-    this.number = number;
+  public int getId() {
+    return id;
   }
 
   @Override
   public String toString() {
-    return "Car{" +
-      "id=" + id +
-      ", mark=" + mark +
-      ", model='" + model + '\'' +
-      ", year=" + year +
-      ", color='" + color + '\'' +
-      ", price=" + price +
-      ", number='" + number + '\'' +
-      '}';
+    return "Car{"
+               + "id=" + id
+               + ", mark=" + mark
+               + ", model='" + model + '\''
+               + ", year=" + year
+               + ", color='" + color + '\''
+               + ", price=" + price
+               + ", number='" + number + '\'' + '}';
   }
 }

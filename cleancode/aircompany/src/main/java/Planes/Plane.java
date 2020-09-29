@@ -22,15 +22,12 @@ abstract public class Plane {
     return maxFlightDistance;
   }
 
-  public int getMinLoadCapacity() {
-    return this.maxLoadCapacity;
-  }
-
   @Override
   public String toString() {
-    return "\nPlane{"+ "model='" + planeModel + '\''
-                   + ", maxSpeed=" + maxSpeed
-                   + ", maxFlightDistance=" + maxFlightDistance
-                   + ", maxLoadCapacity=" + maxLoadCapacity;
+    return "\nPlane{"
+               + "model='" + planeModel + '\''
+               + ", maxSpeed=" + maxSpeed
+               + ", maxFlightDistance=" + maxFlightDistance
+               + ", maxLoadCapacity=" + maxLoadCapacity;
   }
 }

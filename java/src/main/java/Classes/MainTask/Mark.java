@@ -1,5 +1,8 @@
 package Classes.MainTask;
 
 public enum Mark {
-  BMW, TOYOTA, FIAT, JEEP
+  BMW,
+  TOYOTA,
+  FIAT,
+  JEEP
 }
