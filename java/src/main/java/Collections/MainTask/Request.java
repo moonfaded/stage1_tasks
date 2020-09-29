@@ -1,5 +1,6 @@
 package Collections.MainTask;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -24,14 +25,14 @@ public class Request {
     return this;
   }
 
-  public Car getCarFasterThan200() {
-    Car carFasterThan200 = carList.get(0);
+  public List<Car> getCarFasterThan200() {
+    List<Car> carsFasterThan200 = new ArrayList<>();
     for (Car car : carList) {
-      if (car.getMaxSpeed() > carFasterThan200.getMaxSpeed()) {
-        carFasterThan200 = car;
+      if (car.getMaxSpeed() > 200) {
+        carsFasterThan200.add(car);
       }
     }
-    return carFasterThan200;
+    return carsFasterThan200;
   }
 
   @Override
