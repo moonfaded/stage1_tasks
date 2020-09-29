@@ -11,7 +11,7 @@ public class SortLineFromFile {
   public static void main(String[] args) throws FileNotFoundException {
     ArrayList<String> fileLinesAsStringArray = new ArrayList<>();
 
-    Scanner fileScanner = new Scanner(new File("C:\\epam\\stage1_tasks\\java\\src\\main\\java\\Collections\\OptionalTask\\file.txt"));
+    Scanner fileScanner = new Scanner(new File("..\\stage1_tasks\\java\\src\\main\\java\\Collections\\OptionalTask\\file.txt"));
     while (fileScanner.hasNext()) {
       fileLinesAsStringArray.add(fileScanner.nextLine());
     }

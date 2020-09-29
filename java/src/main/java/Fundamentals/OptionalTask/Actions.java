@@ -69,10 +69,10 @@ public class Actions {
   }
 
   public static void printMatrix(int[][] squareMatrix) {
-    for (int matrixRow = 0; matrixRow < squareMatrix.length; matrixRow++) {
+    for (int[] matrix : squareMatrix) {
       System.out.println(" ");
       for (int matrixColumn = 0; matrixColumn < squareMatrix.length; matrixColumn++) {
-        System.out.print(" | " + squareMatrix[matrixRow][matrixColumn]);
+        System.out.print(" | " + matrix[matrixColumn]);
       }
     }
     System.out.println("\n");
