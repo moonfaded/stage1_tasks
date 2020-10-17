@@ -8,10 +8,10 @@ public class NumbersInReverseOrder {
   public static void main(String[] args) throws InputMismatchException{
 
     Stack<Character> stack = new Stack<>();
-    Scanner sc1 = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Введите число ");
-    int number = sc1.nextInt();
+    int number = scanner.nextInt();
 
     char [] numeralsAsChars = String.valueOf(number).toCharArray();
 
@@ -19,9 +19,9 @@ public class NumbersInReverseOrder {
       stack.push(numeralAsChar);}
 
     while(!stack.empty()) {
-      char stackNum;
-      stackNum = stack.pop();
-      System.out.print(stackNum);
+      char stackNumeral;
+      stackNumeral = stack.pop();
+      System.out.print(stackNumeral);
     }
   }
 }

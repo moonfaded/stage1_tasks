@@ -4,13 +4,13 @@ import java.util.Objects;
 
 abstract public class Plane {
 
-  private final String planeModel;
+  private final String model;
   private final int maxSpeed;
   private final int maxFlightDistance;
   private final int maxLoadCapacity;
 
-  public Plane(String planeModel, int maxSpeed, int maxFlightDistance, int maxLoadCapacity) {
-    this.planeModel = planeModel;
+  public Plane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity) {
+    this.model = model;
     this.maxSpeed = maxSpeed;
     this.maxFlightDistance = maxFlightDistance;
     this.maxLoadCapacity = maxLoadCapacity;
@@ -27,7 +27,7 @@ abstract public class Plane {
   @Override
   public String toString() {
     return "\nPlane{"
-               + "model='" + planeModel + '\''
+               + "model='" + model + '\''
                + ", maxSpeed=" + maxSpeed
                + ", maxFlightDistance=" + maxFlightDistance
                + ", maxLoadCapacity=" + maxLoadCapacity;
@@ -41,11 +41,11 @@ abstract public class Plane {
     return maxSpeed == plane.maxSpeed &&
                maxFlightDistance == plane.maxFlightDistance &&
                maxLoadCapacity == plane.maxLoadCapacity &&
-               planeModel.equals(plane.planeModel);
+               model.equals(plane.model);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(planeModel, maxSpeed, maxFlightDistance, maxLoadCapacity);
+    return Objects.hash(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
   }
 }

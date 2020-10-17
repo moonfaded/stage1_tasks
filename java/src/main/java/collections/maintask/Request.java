@@ -26,13 +26,13 @@ public class Request {
   }
 
   public List<Car> getCarsFasterThan200() {
-    List<Car> carsFasterThan200 = new ArrayList<>();
+    List<Car> carsFasterThan200List = new ArrayList<>();
     for (Car car : carList) {
       if (car.getMaxSpeed() > 200) {
-        carsFasterThan200.add(car);
+        carsFasterThan200List.add(car);
       }
     }
-    return carsFasterThan200;
+    return carsFasterThan200List;
   }
 
   @Override

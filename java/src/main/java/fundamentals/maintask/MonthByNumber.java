@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class MonthByNumber {
   public static void main(String[] args) {
 
-    int MonthNumber = 0;
-    Scanner monthNumberInput = new Scanner(System.in);
+    int monthNumber = 0;
+    Scanner scanner = new Scanner(System.in);
 
-    while (MonthNumber < 1 || MonthNumber > 12) {
+    while (monthNumber < 1 || monthNumber > 12) {
       System.out.println("Please, enter int between 1..12");
-      MonthNumber = monthNumberInput.nextInt();
+      monthNumber = scanner.nextInt();
     }
-    System.out.println(java.time.Month.of(MonthNumber));
+    System.out.println(java.time.Month.of(monthNumber));
   }
 }

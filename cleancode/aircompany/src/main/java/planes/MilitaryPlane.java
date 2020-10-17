@@ -2,15 +2,15 @@ package planes;
 
 public class MilitaryPlane extends Plane {
 
-  private final MilitaryPlaneType type;
+  private final MilitaryPlaneType militaryPlaneType;
 
-  public MilitaryPlane(String planeModel, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryPlaneType type) {
+  public MilitaryPlane(String planeModel, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryPlaneType militaryPlaneType) {
     super(planeModel, maxSpeed, maxFlightDistance, maxLoadCapacity);
-    this.type = type;
+    this.militaryPlaneType = militaryPlaneType;
   }
 
   @Override
   public String toString() {
-    return super.toString() + ", type=" + type + "}";
+    return super.toString() + ", type=" + militaryPlaneType + "}";
   }
 }

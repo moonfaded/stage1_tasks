@@ -4,22 +4,22 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Actions {
-  private static int biggestNumber;
-  private static int lineOfBiggestNumber;
-  private static int columnOfBiggestNumber;
+  private static int maxNumber;
+  private static int rowOfMaxNumber;
+  private static int columnOfMaxNumber;
 
-  private static final Scanner enterFromKeyboard = new Scanner(System.in);
+  static Scanner scanner = new Scanner(System.in);
 
   public static int getMaxNumber() {
-    return biggestNumber;
+    return maxNumber;
   }
 
   public static int getRowOfMaxNumber() {
-    return lineOfBiggestNumber;
+    return rowOfMaxNumber;
   }
 
   public static int getColumnOfMaxNumber() {
-    return columnOfBiggestNumber;
+    return columnOfMaxNumber;
   }
 
   public static int setSquareMatrixSizeByKeyboard() {
@@ -27,7 +27,7 @@ public class Actions {
 
     while (squareMatrixSize < 1 || squareMatrixSize > 100) {
       System.out.print("Please, enter square matrix size(1..100): ");
-      squareMatrixSize = enterFromKeyboard.nextInt();
+      squareMatrixSize = scanner.nextInt();
     }
     return squareMatrixSize;
   }
@@ -37,7 +37,7 @@ public class Actions {
 
     while (rangeOfRandomNumbers < 1 || rangeOfRandomNumbers > 100) {
       System.out.print("Please, enter matrix range (1..100): ");
-      rangeOfRandomNumbers = enterFromKeyboard.nextInt();
+      rangeOfRandomNumbers = scanner.nextInt();
     }
     return rangeOfRandomNumbers;
   }
@@ -48,8 +48,8 @@ public class Actions {
 
     for (int matrixRow = 0; matrixRow < squareMatrixSize; matrixRow++) {
       for (int matrixColumn = 0; matrixColumn < squareMatrixSize; matrixColumn++) {
-        int convertedRangeForRandomizer = rangeOfRandomNumbers * 2 + 1;
-        int randomNumberByRandomizer = randomizer.nextInt(convertedRangeForRandomizer) - rangeOfRandomNumbers;
+        int rangeConvertedForRandomizer = rangeOfRandomNumbers * 2 + 1;
+        int randomNumberByRandomizer = randomizer.nextInt(rangeConvertedForRandomizer) - rangeOfRandomNumbers;
         matrix[matrixRow][matrixColumn] = randomNumberByRandomizer;
       }
     }
@@ -59,10 +59,10 @@ public class Actions {
   public static void findMaxNumberInMatrix(int[][] squareMatrix, int squareMatrixSize) {
     for (int matrixRow = 0; matrixRow < squareMatrixSize; matrixRow++) {
       for (int MatrixColumn = 0; MatrixColumn < squareMatrixSize; MatrixColumn++) {
-        if (squareMatrix[matrixRow][MatrixColumn] > biggestNumber) {
-          biggestNumber = squareMatrix[matrixRow][MatrixColumn];
-          lineOfBiggestNumber = matrixRow;
-          columnOfBiggestNumber = MatrixColumn;
+        if (squareMatrix[matrixRow][MatrixColumn] > maxNumber) {
+          maxNumber = squareMatrix[matrixRow][MatrixColumn];
+          rowOfMaxNumber = matrixRow;
+          columnOfMaxNumber = MatrixColumn;
         }
       }
     }
@@ -82,11 +82,11 @@ public class Actions {
     int[][] editedMatrix = new int[squareMatrixSize - 1][squareMatrixSize - 1];
 
     for (int matrixRow = 0, editedMatrixRow = 0; editedMatrixRow < squareMatrixSize - 1; matrixRow++, editedMatrixRow++) {
-      if (matrixRow == lineOfBiggestNumber) {
+      if (matrixRow == rowOfMaxNumber) {
         matrixRow++;
       }
       for (int matrixColumn = 0, exitedMatrixColumn = 0; exitedMatrixColumn < squareMatrixSize - 1; matrixColumn++, exitedMatrixColumn++) {
-        if (matrixColumn == columnOfBiggestNumber) {
+        if (matrixColumn == columnOfMaxNumber) {
           matrixColumn++;
         }
         editedMatrix[editedMatrixRow][exitedMatrixColumn] = squareMatrix[matrixRow][matrixColumn];

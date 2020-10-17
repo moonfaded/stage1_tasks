@@ -13,36 +13,36 @@ public class Request {
   }
 
   public List<Car> getCarsByMark(Mark mark) {
-    List<Car> getCarsByMark = new ArrayList<>();
-    for (Car car : this.carList) {
+    List<Car> carsByMarkList = new ArrayList<>();
+    for (Car car : carList) {
       if (car.getMark().equals(mark))
-        getCarsByMark.add(car);
+        carsByMarkList.add(car);
     }
-    return getCarsByMark;
+    return carsByMarkList;
   }
 
   public List<Car> getCarsByModelAndAge(String model) {
-    List<Car> getCarsByModelAndYears = new ArrayList<>();
+    List<Car> carsByModelAndAgeList = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
     System.out.print("Please, enter age for sorting cars by model and age: ");
-    int ageForSorting = scanner.nextInt();
+    int ageForSort = scanner.nextInt();
 
-    for (Car car : this.carList) {
-      if (car.getModel().equals(model) && 2020 - car.getYear() > ageForSorting) {
-        getCarsByModelAndYears.add(car);
+    for (Car car : carList) {
+      if (car.getModel().equals(model) && 2020 - car.getYear() > ageForSort) {
+        carsByModelAndAgeList.add(car);
       }
     }
-    return getCarsByModelAndYears;
+    return carsByModelAndAgeList;
   }
 
   public List<Car> getCarsByYearAndPrice(int year, int price) {
-    List<Car> getCarsByYearAndPrice = new ArrayList<>();
+    List<Car> carsByYearAndPriceList = new ArrayList<>();
     for (Car car : this.carList) {
       if (year == car.getYear() && price < car.getPrice()) {
-        getCarsByYearAndPrice.add(car);
+        carsByYearAndPriceList.add(car);
       }
     }
-    return getCarsByYearAndPrice;
+    return carsByYearAndPriceList;
   }
 }

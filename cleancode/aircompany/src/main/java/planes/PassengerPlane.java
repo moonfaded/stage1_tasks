@@ -2,19 +2,19 @@ package planes;
 
 public class PassengerPlane extends Plane {
 
-  private final int passengersCapacity;
+  private final int passengerCapacity;
 
-  public PassengerPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, int passengersCapacity) {
+  public PassengerPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, int passengerCapacity) {
     super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-    this.passengersCapacity = passengersCapacity;
+    this.passengerCapacity = passengerCapacity;
   }
 
-  public int getPassengersCapacity() {
-    return passengersCapacity;
+  public int getPassengerCapacity() {
+    return passengerCapacity;
   }
 
   @Override
   public String toString() {
-    return super.toString() + ", passengersCapacity=" + passengersCapacity + "}";
+    return super.toString() + ", passengersCapacity=" + passengerCapacity + "}";
   }
 }

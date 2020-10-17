@@ -6,55 +6,55 @@ import java.util.*;
 
 public class Request {
 
-  private final List<? extends Plane> planes;
+  private final List<? extends Plane> planeList;
 
-  public Request(List<? extends Plane> planes) {
-    this.planes = planes;
+  public Request(List<? extends Plane> planeList) {
+    this.planeList = planeList;
   }
 
   public List<PassengerPlane> getPassengerPlanes() {
-    List<PassengerPlane> passengerPlanes = new ArrayList<>();
-    for (Plane plane : this.planes) {
+    List<PassengerPlane> passengerPlaneList = new ArrayList<>();
+    for (Plane plane : planeList) {
       if (plane instanceof PassengerPlane) {
-        passengerPlanes.add((PassengerPlane) plane);
+        passengerPlaneList.add((PassengerPlane) plane);
       }
     }
-    return passengerPlanes;
+    return passengerPlaneList;
   }
 
   public List<MilitaryPlane> getMilitaryPlanes() {
-    List<MilitaryPlane> militaryPlanes = new ArrayList<>();
-    for (Plane plane : planes) {
+    List<MilitaryPlane> militaryPlaneList = new ArrayList<>();
+    for (Plane plane : planeList) {
       if (plane instanceof MilitaryPlane) {
-        militaryPlanes.add((MilitaryPlane) plane);
+        militaryPlaneList.add((MilitaryPlane) plane);
       }
     }
-    return militaryPlanes;
+    return militaryPlaneList;
   }
 
   public PassengerPlane getPassengerPlaneWithMaxPassengerCapacity() {
-    List<PassengerPlane> passengerPlanes = getPassengerPlanes();
-    PassengerPlane planeWithMaxCapacity = passengerPlanes.get(0);
-    for (PassengerPlane passengerPlane : passengerPlanes) {
-      if (passengerPlane.getPassengersCapacity() > planeWithMaxCapacity.getPassengersCapacity()) {
-        planeWithMaxCapacity = passengerPlane;
+    List<PassengerPlane> passengerPlaneList = getPassengerPlanes();
+    PassengerPlane planeWithMaxPassengerCapacity = passengerPlaneList.get(0);
+    for (PassengerPlane plane : passengerPlaneList) {
+      if (plane.getPassengerCapacity() > planeWithMaxPassengerCapacity.getPassengerCapacity()) {
+        planeWithMaxPassengerCapacity = plane;
       }
     }
-    return planeWithMaxCapacity;
+    return planeWithMaxPassengerCapacity;
   }
 
   public Request sortPlanesByMaxDistance() {
-    planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxFlightDistance() - o2.getMaxFlightDistance());
+    planeList.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxFlightDistance() - o2.getMaxFlightDistance());
     return this;
   }
 
   public Request sortPlanesByMaxSpeed() {
-    planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
+    planeList.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
     return this;
   }
 
   @Override
   public String toString() {
-    return planes.toString();
+    return planeList.toString();
   }
 }
