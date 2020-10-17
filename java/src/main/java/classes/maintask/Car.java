@@ -1,4 +1,4 @@
-package Classes.MainTask;
+package classes.maintask;
 
 public class Car {
 

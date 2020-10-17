@@ -1,4 +1,4 @@
-package Fundamentals.MainTask;
+package fundamentals.maintask;
 
 public class ArgumentsSumAndMultiplication {
   public static void main(String[] args) {

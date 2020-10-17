@@ -1,4 +1,4 @@
-package Planes;
+package planes;
 
 public enum MilitaryPlaneType {
   FIGHTER,

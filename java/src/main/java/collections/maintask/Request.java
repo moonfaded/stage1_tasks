@@ -1,4 +1,4 @@
-package Collections.MainTask;
+package collections.maintask;
 
 import java.util.ArrayList;
 import java.util.Comparator;

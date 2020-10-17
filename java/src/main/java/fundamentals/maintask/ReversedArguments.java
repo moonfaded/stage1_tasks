@@ -1,4 +1,4 @@
-package Fundamentals.MainTask;
+package fundamentals.maintask;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -1,6 +1,6 @@
-package Fundamentals.OptionalTask;
+package fundamentals.optionaltask;
 
-import static Fundamentals.OptionalTask.Actions.*;
+import static fundamentals.optionaltask.Actions.*;
 
 public class Start {
 

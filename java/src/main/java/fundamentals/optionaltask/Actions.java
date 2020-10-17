@@ -1,4 +1,4 @@
-package Fundamentals.OptionalTask;
+package fundamentals.optionaltask;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package Collections.OptionalTask;
+package collections.optionaltask;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

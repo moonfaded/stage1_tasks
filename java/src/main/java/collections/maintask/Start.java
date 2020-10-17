@@ -1,4 +1,4 @@
-package Collections.MainTask;
+package collections.maintask;
 
 import java.util.Arrays;
 import java.util.List;
