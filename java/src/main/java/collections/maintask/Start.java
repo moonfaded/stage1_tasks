@@ -16,13 +16,13 @@ public class Start {
 
     Request request = new Request(taxiStation);
 
-    System.out.println("\nTaxi station coast = " + request.taxiStationPrice());
+    System.out.println("\nTaxi station coast = " + request.getTaxiStationPrice());
 
     System.out.println("\n Cars sorted by fuel consumption: " + request
-                                                                    .sortByFuelConsumption()
+                                                                    .sortCarsByFuelConsumption()
                                                                     .toString());
     System.out.println("\nCar with faster than 200: " + request
-                                                            .getCarFasterThan200()
+                                                            .getCarsFasterThan200()
                                                             .toString());
   }
 }

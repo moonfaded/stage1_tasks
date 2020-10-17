@@ -6,21 +6,21 @@ public class Start {
 
   public static void main(String[] args) {
 
-    int squareMatrixSize = setSquareMatrixSizeFromKeyboard();
+    int squareMatrixSize = setSquareMatrixSizeByKeyboard();
     System.out.println("Matrix size = " + squareMatrixSize);
 
-    int rangeOfRandomNumbers = setRangeOfRandomNumbersFromKeyboard();
+    int rangeOfRandomNumbers = setRangeOfRandomNumbersByKeyboard();
     System.out.println("Matrix range = " + rangeOfRandomNumbers);
 
     int[][] squareMatrix = createAndFillMatrix(squareMatrixSize, rangeOfRandomNumbers);
     printMatrix(squareMatrix);
 
-    findBiggestNumberInMatrix(squareMatrix, squareMatrixSize);
-    System.out.println("Biggest number in matrix = " + getBiggestNumber());
-    System.out.println("Line of biggest number = " + getLineOfBiggestNumber());
-    System.out.println("Column of biggest number = " + getColumnOfBiggestNumber());
+    findMaxNumberInMatrix(squareMatrix, squareMatrixSize);
+    System.out.println("Biggest number in matrix = " + getMaxNumber());
+    System.out.println("Line of biggest number = " + getRowOfMaxNumber());
+    System.out.println("Column of biggest number = " + getColumnOfMaxNumber());
 
-    squareMatrix = deleteLineAndColumnOfBiggestNumber(squareMatrix, squareMatrixSize);
+    squareMatrix = deleteRowAndColumnOfMaxNumber(squareMatrix, squareMatrixSize);
     printMatrix(squareMatrix);
   }
 }

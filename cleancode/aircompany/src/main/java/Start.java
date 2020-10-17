@@ -33,16 +33,16 @@ public class Start {
 
     System.out.println("\nMilitary planes, sorted by max distance: \n"
                            + militaryPlaneRequest
-                                 .sortByMaxDistance()
+                                 .sortPlanesByMaxDistance()
                                  .toString());
 
     System.out.println("\nPassenger planes, sorted by max speed: \n"
                            + passengerPlaneRequest
-                                 .sortByMaxSpeed()
+                                 .sortPlanesByMaxSpeed()
                                  .toString());
 
     System.out.println("\nPlane with max passenger capacity: \n"
                            + passengerPlaneRequest
-                                 .getPassengerPlaneWithMaxPassengersCapacity());
+                                 .getPassengerPlaneWithMaxPassengerCapacity());
   }
 }

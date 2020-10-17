@@ -46,19 +46,19 @@ public class RequestTest {
   }
 
   @Test
-  public void getPassengerPlaneWithMaxPassengersCapacityTest() {
-    Assert.assertEquals(request.getPassengerPlaneWithMaxPassengersCapacity(), planes.get(1));
+  public void getPassengerPlaneWithMaxPassengerCapacityTest() {
+    Assert.assertEquals(request.getPassengerPlaneWithMaxPassengerCapacity(), planes.get(1));
   }
 
   @Test
-  public void sortByMaxDistanceTest() {
-    request.sortByMaxDistance();
+  public void sortPlanesByMaxDistanceTest() {
+    request.sortPlanesByMaxDistance();
     Assert.assertEquals(planes, planesSortedByMaxDistance);
   }
 
   @Test
-  public void sortByMaxSpeedTest() {
-    request.sortByMaxSpeed();
+  public void sortPlanesByMaxSpeedTest() {
+    request.sortPlanesByMaxSpeed();
     Assert.assertEquals(planes, planesSortedByMaxSpeed);
   }
 }

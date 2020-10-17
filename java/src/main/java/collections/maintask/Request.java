@@ -12,7 +12,7 @@ public class Request {
     this.carList = carList;
   }
 
-  public int taxiStationPrice() {
+  public int getTaxiStationPrice() {
     int taxiStationPrice = 0;
     for (Car car: carList) {
       taxiStationPrice += car.getCoast();
@@ -20,12 +20,12 @@ public class Request {
     return taxiStationPrice;
   }
 
-  public Request sortByFuelConsumption() {
+  public Request sortCarsByFuelConsumption() {
     carList.sort((Comparator<Car>) (o1, o2) -> o1.getFuelConsumption() - o2.getFuelConsumption());
     return this;
   }
 
-  public List<Car> getCarFasterThan200() {
+  public List<Car> getCarsFasterThan200() {
     List<Car> carsFasterThan200 = new ArrayList<>();
     for (Car car : carList) {
       if (car.getMaxSpeed() > 200) {

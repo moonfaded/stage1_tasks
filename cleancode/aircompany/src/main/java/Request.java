@@ -32,7 +32,7 @@ public class Request {
     return militaryPlanes;
   }
 
-  public PassengerPlane getPassengerPlaneWithMaxPassengersCapacity() {
+  public PassengerPlane getPassengerPlaneWithMaxPassengerCapacity() {
     List<PassengerPlane> passengerPlanes = getPassengerPlanes();
     PassengerPlane planeWithMaxCapacity = passengerPlanes.get(0);
     for (PassengerPlane passengerPlane : passengerPlanes) {
@@ -43,12 +43,12 @@ public class Request {
     return planeWithMaxCapacity;
   }
 
-  public Request sortByMaxDistance() {
-    planes.sort((Comparator<Plane>) (o1, o2) -> o1.GetMaxFlightDistance() - o2.GetMaxFlightDistance());
+  public Request sortPlanesByMaxDistance() {
+    planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxFlightDistance() - o2.getMaxFlightDistance());
     return this;
   }
 
-  public Request sortByMaxSpeed() {
+  public Request sortPlanesByMaxSpeed() {
     planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
     return this;
   }

@@ -7,7 +7,7 @@ import java.util.Stack;
 public class NumbersInReverseOrder {
   public static void main(String[] args) throws InputMismatchException{
 
-    Stack stack = new Stack();
+    Stack<Character> stack = new Stack<>();
     Scanner sc1 = new Scanner(System.in);
 
     System.out.println("Введите число ");
@@ -20,7 +20,7 @@ public class NumbersInReverseOrder {
 
     while(!stack.empty()) {
       char stackNum;
-      stackNum = (Character)stack.pop();
+      stackNum = stack.pop();
       System.out.print(stackNum);
     }
   }

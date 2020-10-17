@@ -10,19 +10,19 @@ public class Actions {
 
   private static final Scanner enterFromKeyboard = new Scanner(System.in);
 
-  public static int getBiggestNumber() {
+  public static int getMaxNumber() {
     return biggestNumber;
   }
 
-  public static int getLineOfBiggestNumber() {
+  public static int getRowOfMaxNumber() {
     return lineOfBiggestNumber;
   }
 
-  public static int getColumnOfBiggestNumber() {
+  public static int getColumnOfMaxNumber() {
     return columnOfBiggestNumber;
   }
 
-  public static int setSquareMatrixSizeFromKeyboard() {
+  public static int setSquareMatrixSizeByKeyboard() {
     int squareMatrixSize = 0;
 
     while (squareMatrixSize < 1 || squareMatrixSize > 100) {
@@ -32,7 +32,7 @@ public class Actions {
     return squareMatrixSize;
   }
 
-  public static int setRangeOfRandomNumbersFromKeyboard() {
+  public static int setRangeOfRandomNumbersByKeyboard() {
     int rangeOfRandomNumbers = 0;
 
     while (rangeOfRandomNumbers < 1 || rangeOfRandomNumbers > 100) {
@@ -56,7 +56,7 @@ public class Actions {
     return matrix;
   }
 
-  public static void findBiggestNumberInMatrix(int[][] squareMatrix, int squareMatrixSize) {
+  public static void findMaxNumberInMatrix(int[][] squareMatrix, int squareMatrixSize) {
     for (int matrixRow = 0; matrixRow < squareMatrixSize; matrixRow++) {
       for (int MatrixColumn = 0; MatrixColumn < squareMatrixSize; MatrixColumn++) {
         if (squareMatrix[matrixRow][MatrixColumn] > biggestNumber) {
@@ -78,7 +78,7 @@ public class Actions {
     System.out.println("\n");
   }
 
-  public static int[][] deleteLineAndColumnOfBiggestNumber(int[][] squareMatrix, int squareMatrixSize) {
+  public static int[][] deleteRowAndColumnOfMaxNumber(int[][] squareMatrix, int squareMatrixSize) {
     int[][] editedMatrix = new int[squareMatrixSize - 1][squareMatrixSize - 1];
 
     for (int matrixRow = 0, editedMatrixRow = 0; editedMatrixRow < squareMatrixSize - 1; matrixRow++, editedMatrixRow++) {
